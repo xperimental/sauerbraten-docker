@@ -16,6 +16,8 @@ RUN wget -qO /usr/local/sauerbraten.tar.bz2 "http://downloads.sourceforge.net/pr
 RUN wget -qO /usr/local/bin/dumb-init https://github.com/Yelp/dumb-init/releases/download/v1.1.1/dumb-init_1.1.1_amd64 \
  && chmod +x /usr/local/bin/dumb-init
 
+VOLUME /root/.sauerbraten/
+
 WORKDIR /usr/local/sauerbraten/
 
 EXPOSE 28784/udp 28785/udp 28786/udp
